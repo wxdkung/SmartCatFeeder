@@ -1,0 +1,189 @@
+/* ===============================
+   GLOBAL COLOR FIX (READABLE MODE)
+   =============================== */
+
+:root {
+  --bg-dark: #0b1020;
+  --card-dark: #0f172a;
+  --text-main: #f9fafb;      /* ขาว อ่านง่าย */
+  --text-secondary: #cbd5f5; /* เทาอ่อน */
+  --text-muted: #94a3b8;
+  --border-soft: rgba(255,255,255,0.12);
+  --accent: #8b5cf6;
+}
+
+/* ===== GLOBAL TEXT ===== */
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: var(--text-main);
+}
+
+/* ทุก heading */
+h1, h2, h3, h4, h5 {
+  color: var(--text-main);
+}
+
+/* ข้อความทั่วไป */
+p, span, label, li {
+  color: var(--text-secondary);
+}
+
+/* ===== CARD ===== */
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid var(--border-soft);
+  color: var(--text-main);
+}
+
+/* ===== INPUT ===== */
+input {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid var(--border-soft);
+  color: var(--text-main);
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ===== BUTTON ===== */
+button {
+  color: white;
+}
+
+/* ===== LOG LIST ===== */
+.log-list li {
+  color: var(--text-secondary);
+}
+
+.log-list small {
+  color: var(--text-muted);
+}
+
+/* ===== ADMIN TABLE ===== */
+table {
+  color: var(--text-secondary);
+}
+
+th {
+  color: var(--text-main);
+}
+
+td {
+  border-bottom: 1px solid var(--border-soft);
+}
+
+/* ===== CHART TEXT (recharts / chart.js) ===== */
+.recharts-text,
+.recharts-label,
+.recharts-cartesian-axis-tick-value {
+  fill: #e5e7eb !important;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  color: white;
+}
+
+/* ===============================
+   FUTURISTIC + GAME STYLE
+   =============================== */
+
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+/* ใช้ฟอนต์เกม */
+body {
+  font-family: "Orbitron", system-ui, sans-serif;
+}
+
+/* ===== NUTRITION CARD (FIX WHITE BOX) ===== */
+.nutrition-card {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(139,92,246,0.15),
+    rgba(34,211,238,0.08)
+  );
+
+  border: 1px solid rgba(139,92,246,0.4);
+  color: #f8fafc;
+
+  box-shadow:
+    0 0 12px rgba(139,92,246,0.35),
+    inset 0 0 12px rgba(255,255,255,0.04);
+
+  transition: all 0.35s ease;
+}
+
+/* Hover glow */
+.nutrition-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 0 24px rgba(139,92,246,0.65),
+    0 0 48px rgba(34,211,238,0.35);
+}
+
+/* Title */
+.nutrition-card h3 {
+  color: #a5b4fc;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Text inside */
+.nutrition-card p {
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+/* ===== CARD HOVER GLOW (ALL DASHBOARD) ===== */
+.card {
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 18px rgba(139,92,246,0.45),
+    0 0 36px rgba(34,211,238,0.25);
+}
+
+/* ===== BUTTON GAME STYLE ===== */
+button {
+  background: linear-gradient(135deg, #7c3aed, #22d3ee);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-family: "Orbitron";
+  letter-spacing: 1px;
+
+  box-shadow: 0 0 12px rgba(139,92,246,0.6);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  box-shadow:
+    0 0 24px rgba(139,92,246,0.9),
+    0 0 48px rgba(34,211,238,0.6);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* ===== LOG ITEM HOVER ===== */
+.logs li,
+.log-list li {
+  transition: all 0.25s ease;
+}
+
+.logs li:hover,
+.log-list li:hover {
+  background: rgba(139,92,246,0.12);
+  box-shadow: inset 0 0 12px rgba(139,92,246,0.3);
+}
